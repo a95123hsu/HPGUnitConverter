@@ -1,0 +1,7 @@
+services:
+  - type: static_site
+    name: hpg-unit-converter
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    pullRequestPreviewsEnabled: true
