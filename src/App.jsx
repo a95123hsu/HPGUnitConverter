@@ -110,6 +110,58 @@ const converterGroups = [
     }
   },
   {
+    id: "weight",
+    title: "Weight",
+    initialValue: "1",
+    initialUnit: "kg",
+    formula: [
+      "Supports microgram, milligram, gram, kilogram, metric ton, ounce, pound, and stone",
+      "Base conversion uses kilograms (kg)"
+    ],
+    units: {
+      microgram: {
+        label: "Microgram (ug)",
+        toBase: (value) => value / 1000000000,
+        fromBase: (value) => value * 1000000000
+      },
+      milligram: {
+        label: "Milligram (mg)",
+        toBase: (value) => value / 1000000,
+        fromBase: (value) => value * 1000000
+      },
+      gram: {
+        label: "Gram (g)",
+        toBase: (value) => value / 1000,
+        fromBase: (value) => value * 1000
+      },
+      kg: {
+        label: "Kilogram (kg)",
+        toBase: (value) => value,
+        fromBase: (value) => value
+      },
+      metricTon: {
+        label: "Metric Ton (t)",
+        toBase: (value) => value * 1000,
+        fromBase: (value) => value / 1000
+      },
+      ounce: {
+        label: "Ounce (oz)",
+        toBase: (value) => value * 0.028349523125,
+        fromBase: (value) => value / 0.028349523125
+      },
+      pound: {
+        label: "Pound (lb)",
+        toBase: (value) => value * 0.45359237,
+        fromBase: (value) => value / 0.45359237
+      },
+      stone: {
+        label: "Stone (st)",
+        toBase: (value) => value * 6.35029318,
+        fromBase: (value) => value / 6.35029318
+      }
+    }
+  },
+  {
     id: "temperature",
     title: "Temperature",
     initialValue: "0",
