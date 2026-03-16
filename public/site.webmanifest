@@ -1,0 +1,9 @@
+{
+  "name": "Hung Pump Group Unit Converter",
+  "short_name": "HP Converter",
+  "description": "Unit conversion tools for power, pressure, flow, temperature, and pump head.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220"
+}
