@@ -142,19 +142,49 @@ const converterGroups = [
     initialValue: "1",
     initialUnit: "meter",
     formula: [
-      "1 meter = 3.28084 feet",
-      "1 foot = 0.3048 meter"
+      "Supports mm, cm, m, km, in, ft, yd, and mi",
+      "Base conversion uses 1 meter = 39.37007874 inches = 3.28084 feet"
     ],
     units: {
+      millimeter: {
+        label: "Millimeter (mm)",
+        toBase: (value) => value / 1000,
+        fromBase: (value) => value * 1000
+      },
+      centimeter: {
+        label: "Centimeter (cm)",
+        toBase: (value) => value / 100,
+        fromBase: (value) => value * 100
+      },
       meter: {
         label: "Meter (m)",
         toBase: (value) => value,
         fromBase: (value) => value
       },
+      kilometer: {
+        label: "Kilometer (km)",
+        toBase: (value) => value * 1000,
+        fromBase: (value) => value / 1000
+      },
+      inch: {
+        label: "Inch (in)",
+        toBase: (value) => value * 0.0254,
+        fromBase: (value) => value / 0.0254
+      },
       foot: {
         label: "Foot (ft)",
         toBase: (value) => value * 0.3048,
         fromBase: (value) => value / 0.3048
+      },
+      yard: {
+        label: "Yard (yd)",
+        toBase: (value) => value * 0.9144,
+        fromBase: (value) => value / 0.9144
+      },
+      mile: {
+        label: "Mile (mi)",
+        toBase: (value) => value * 1609.344,
+        fromBase: (value) => value / 1609.344
       }
     }
   }
@@ -335,7 +365,7 @@ export default function App() {
         />
       </section>
 
-      <p className="footer">Hung Pump Group reserved the copyright.</p>
+      <p className="footer">© 2026 HUNGPUMP INDUSTRIAL CO., LTD. All rights reserved.</p>
     </main>
   );
 }
