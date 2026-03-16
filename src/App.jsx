@@ -304,7 +304,7 @@ export default function App() {
               rel="noreferrer"
               aria-label="Visit Hung Pump Group website"
             >
-              <img className="hero-logo" src="/hp-logo.gif" alt="HP logo" />
+              <img className="hero-logo" src="/hung-pump.png" alt="Hung Pump logo" />
             </a>
             <h1>Unit Converter</h1>
             <p>
