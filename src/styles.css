@@ -1,18 +1,4 @@
 :root {
-  --bg: #f3f6fb;
-  --bg-accent: #e7eef8;
-  --surface: rgba(255, 255, 255, 0.9);
-  --surface-alt: #eef3f9;
-  --surface-soft: #ffffff;
-  --ink: #162032;
-  --muted: #5e6b7e;
-  --line: rgba(100, 116, 139, 0.2);
-  --accent: #2563eb;
-  --accent-strong: #1d4ed8;
-  --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-}
-
-:root[data-theme="dark"] {
   --bg: #0b1220;
   --bg-accent: #111827;
   --surface: rgba(15, 23, 42, 0.88);
@@ -107,25 +93,6 @@ label,
 
 .hero p {
   max-width: 40rem;
-}
-
-.theme-toggle {
-  flex-shrink: 0;
-  padding: 10px 14px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--surface-soft);
-  color: var(--ink);
-  cursor: pointer;
-}
-
-.theme-toggle:hover {
-  border-color: var(--accent);
-}
-
-.theme-toggle:focus {
-  outline: 2px solid rgba(96, 165, 250, 0.35);
-  outline-offset: 1px;
 }
 
 .grid {
@@ -309,10 +276,6 @@ td {
 
   .hero-top {
     flex-direction: column;
-  }
-
-  .theme-toggle {
-    width: 100%;
   }
 
   .hero-logo {

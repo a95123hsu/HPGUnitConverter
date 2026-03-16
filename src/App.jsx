@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const converterGroups = [
   {
@@ -292,20 +292,6 @@ function ReferenceTable({ title, description, headers, rows }) {
 }
 
 export default function App() {
-  const [theme, setTheme] = useState(() => {
-    const savedTheme = window.localStorage.getItem("unit-converter-theme");
-    if (savedTheme === "light" || savedTheme === "dark") {
-      return savedTheme;
-    }
-
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  });
-
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    window.localStorage.setItem("unit-converter-theme", theme);
-  }, [theme]);
-
   return (
     <main className="shell">
       <section className="hero">
@@ -325,13 +311,6 @@ export default function App() {
               Hung Pump Group unit converter for power, pressure, flow, temperature, and pump head.
             </p>
           </div>
-          <button
-            className="theme-toggle"
-            type="button"
-            onClick={() => setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"))}
-          >
-            {theme === "dark" ? "Light mode" : "Dark mode"}
-          </button>
         </div>
       </section>
 
