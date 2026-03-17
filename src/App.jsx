@@ -405,13 +405,29 @@ export default function App() {
       <section className="reference">
         <ReferenceTable
           title="SI prefixes"
-          description="Reference values from the PDF."
+          description={
+            <>
+              Reference values from the{" "}
+              <a href="https://online.fliphtml5.com/Hsu617/xusf/#p=80" target="_blank" rel="noreferrer">
+                PDF
+              </a>
+              .
+            </>
+          }
           headers={["Factor", "Symbol", "Prefix"]}
           rows={prefixRows}
         />
         <ReferenceTable
           title="Motor insulation class"
-          description="Static reference table from the PDF."
+          description={
+            <>
+              Static reference table from the{" "}
+              <a href="https://online.fliphtml5.com/Hsu617/xusf/#p=80" target="_blank" rel="noreferrer">
+                PDF
+              </a>
+              .
+            </>
+          }
           headers={["Class", "E", "B", "F", "H"]}
           rows={motorRows}
         />
